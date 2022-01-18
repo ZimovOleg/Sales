@@ -33,22 +33,7 @@ public class StatsService {
         }
         return maxMonth + 1;
     }
-//public int monthMaxSales(int[]salesOnMonths){
-//        // Метод расчета месяца, в котором был пик продаж
-//        // задаем переменную с точкой отсчета первый элемент массива
-//        int monthMax = salesOnMonths[0];
-//        // задаем "кол-во макс. месяцев" переменную со значением ноль
-//        int numberOfMonthMaxSales = 0;
-//        for (int month = 0; month < salesOnMonths.length; month++) {
-//            // месяц = о, месяц меньше кол-ва значений в массиве, месяц +1
-//            if (salesOnMonths [month] >= monthMax) {
-//                //
-//                monthMax = salesOnMonths[month];
-//                numberOfMonthMaxSales = month + 1;
-//            }
-//        }
-//        return numberOfMonthMaxSales;
-//    }
+
     public int monthMinSales (int[] salesOnMonths) {
     int minMonth = 0;
     int month = 0; // переменная для индекса рассматриваемого месяца в массиве
