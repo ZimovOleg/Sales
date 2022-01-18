@@ -8,19 +8,21 @@ class StatsServiceTest {
     int[] salesOnMonths = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
     @Test
-    void countSumOfSalesAllMonths() {
+    void totalSalesForAllMonths  () {
         StatsService service = new StatsService();
         int expected = 180;
-        int actual = service.countSumOfSalesAllMonths(salesOnMonths);
+        int actual = service.totalSalesForAllMonths  (salesOnMonths);
         assertEquals(expected, actual);
+        System.out.println ( "Общая прибыль - " + (expected == actual));
     }
 
     @Test
-    void countMedian() {
+    void averageProfitMonths() {
         StatsService service = new StatsService();
         int expected = 15;
-        int actual = service.countMedian(salesOnMonths);
+        int actual = service.averageProfitMonths(salesOnMonths);
         assertEquals(expected, actual);
+        System.out.println ( "Средняя прибыль - " + (expected == actual));
     }
 
     @Test
@@ -29,6 +31,7 @@ class StatsServiceTest {
         int expected = 8;
         int actual = service.monthMaxSales(salesOnMonths);
         assertEquals(expected, actual);
+        System.out.println ( "Месяц макс. продаж - " + (expected == actual));
     }
 
     @Test
@@ -37,21 +40,24 @@ class StatsServiceTest {
         int expected = 9;
         int actual = service.monthMinSales(salesOnMonths);
         assertEquals(expected, actual);
+        System.out.println ( "Месяц мин. продаж - " + (expected == actual));
     }
 
     @Test
-    void monthsSalesBelowMedian() {
+    void MonthsSaleslowMedian() {
         StatsService service = new StatsService();
         int expected = 5;
-        int actual = service.monthsSalesBelowMedian(salesOnMonths);
+        int actual = service.monthsSaleslowAverage(salesOnMonths);
         assertEquals(expected, actual);
+        System.out.println ( "Кол-во месяцев меньше среднего - " + (expected == actual));
     }
 
     @Test
-    void monthsSalesOverMedian() {
+    void MonthsSalesMaxAverage() {
         StatsService service = new StatsService();
         int expected = 5;
-        int actual = service.monthsSalesOverMedian(salesOnMonths);
+        int actual = service.monthsSalesMaxAverage(salesOnMonths);
         assertEquals(expected, actual);
+        System.out.println ( "Кол-во месяцев больше среднего - " + (expected == actual));
     }
 }
